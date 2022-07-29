@@ -13,7 +13,7 @@ namespace CursoMVC.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(connectionString: "Server=tcp:curso01.database.windows.net,1433;Initial Catalog=CursoMVC_db;Persist Security Info=False;User ID=joaoroas;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            optionsBuilder.UseSqlServer(connectionString: "Server = (localdb)\\mssqllocaldb; Database = CursoMVC; Trusted_Connection = True;");
         }
 
         public virtual void SetModified(object entity)
